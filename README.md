@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 WP Generate Face permet de générer automatiquement des visages synthétiques pour vos contenus WordPress via une API.
 
-[![Voir le tutoriel](https://img.youtube.com/vi/DGYdJ9I6yg4/hqdefault.jpg)](https://www.youtube.com/watch?v=DGYdJ9I6yg4)
+[![Voir le tutoriel](https://img.youtube.com/vi/qT4M4-yUYF8/hqdefault.jpg)](https://www.youtube.com/watch?v=qT4M4-yUYF8)
 
 ## Description
 

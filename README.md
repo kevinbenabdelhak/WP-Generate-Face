@@ -5,7 +5,7 @@ Tags: générateur, visages, médias, photos libres, api
 Requires at least: 5.0  
 Tested up to: 6.8.1  
 Requires PHP: 7.0  
-Stable tag: 1.0  
+Stable tag: 1.1  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -53,6 +53,9 @@ Non, l'utilisation de l'API est gratuite, mais veuillez consulter la politique d
 
 ## Changelog
 
+### 1.1
+* Générer plusieurs images en une seule fois : Ajout d'un input de type "number"
+  
 ### 1.0
 * Première version du plugin avec génération d'images de visages.
 * Intégration de l'API pour suggérer des visages aléatoires.

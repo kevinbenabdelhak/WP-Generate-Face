@@ -4,7 +4,7 @@ Tags: générateur, visages, médias, photos libres, api
 Requires at least: 5.0
 Tested up to: 6.8.1
 Requires PHP: 7.0
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ Oui, WP Generate Face est conçu pour être compatible avec tous les thèmes Wor
 Non, l'utilisation de l'API est gratuite, mais veuillez consulter la politique d'utilisation de cettepersonnenexistepas.fr.
 
 == Changelog ==
+
+= 1.1 =
+* Ajout d'un bouton de type "number" afin de pouvoir choisir le nombre d'images générées
 
 = 1.0 =
 * Première version du plugin avec génération d'images de visages.

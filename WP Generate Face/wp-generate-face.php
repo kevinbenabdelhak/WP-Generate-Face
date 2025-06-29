@@ -2,8 +2,8 @@
 /*
 Plugin Name: WP Generate Face
 Plugin URI: https://kevin-benabdelhak.fr/plugins/wp-generate-face/
-Description: WP Generate Face est un plugin qui permet de générer un visage aléatoire depuis cettepersonnenexistepas.fr et l'enregistrer dans les médias
-Version: 1.0
+Description: WP Generate Face est un plugin qui permet de générer des visages aléatoires depuis cettepersonnenexistepas.fr et l'enregistrer dans les médias
+Version: 1.1
 Author: Kevin Benabdelhak
 Author URI: https://kevin-benabdelhak.fr/
 Contributors: kevinbenabdelhak
@@ -11,7 +11,6 @@ Contributors: kevinbenabdelhak
 
 if (!defined('ABSPATH')) exit;
 
-// Ajouter un bouton à la page de la médiathèque (en mode liste ou grille)
 add_action('media_upload_upload', 'wgf_enqueue_media_button');
 add_action('admin_enqueue_scripts', 'wgf_enqueue_js');
 
@@ -35,14 +34,14 @@ function wgf_enqueue_js($hook) {
     }
 }
 
-// Affichage du bouton dans la page médias
 add_action('pre-upload-ui', 'wgf_generate_face_button');
 function wgf_generate_face_button() {
+    echo '<input id="wgf-image-count" type="number" min="1" value="1" style="width: 60px; margin-right: 10px;margin-top:5px;" />';
     echo '<button id="wgf-generate-face" type="button" class="button" style="margin:5px 0 15px">'.__('Générer un visage', 'wp-generate-face').'</button>';
     echo '<div id="wgf-face-message" style="margin-bottom:10px"></div>';
 }
 
-// Traitement AJAX côté serveur
+// Traitement AJAX côté serveur : génère 1 image à la fois
 add_action('wp_ajax_wgf_generate_face', 'wgf_generate_face_callback');
 function wgf_generate_face_callback() {
     check_ajax_referer('wgf_generate_face_nonce', 'nonce');
@@ -90,10 +89,10 @@ function wgf_generate_face_callback() {
 
     $image_src = wp_get_attachment_url($attach_id);
 
+
     wp_send_json_success(array(
         'message'   => 'Visage généré avec succès !',
         'attach_id' => $attach_id,
         'image_url' => $image_src,
     ));
 }
-?>

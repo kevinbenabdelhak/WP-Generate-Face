@@ -3,7 +3,7 @@
 Plugin Name: WP Generate Face
 Plugin URI: https://kevin-benabdelhak.fr/plugins/wp-generate-face/
 Description: WP Generate Face est un plugin qui permet de générer des visages aléatoires depuis cettepersonnenexistepas.fr et l'enregistrer dans les médias
-Version: 1.2
+Version: 1.1
 Author: Kevin Benabdelhak
 Author URI: https://kevin-benabdelhak.fr/
 Contributors: kevinbenabdelhak
@@ -21,7 +21,7 @@ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 $monUpdateChecker = PucFactory::buildUpdateChecker(
     'https://github.com/kevinbenabdelhak/WP-Generate-Face/', 
     __FILE__,
-    'wp-generate-face' 
+    'WP-Generate-Face' 
 );
 $monUpdateChecker->setBranch('main');
 
